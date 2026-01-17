@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyHorizon Airlines</title>
+    
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center cursor-pointer" onclick="router('home')">
+                    <i class="fa-solid fa-plane-departure text-blue-600 text-3xl mr-3"></i>
+                    <span class="text-xl font-bold tracking-wide text-gray-800">SKY<span class="text-blue-600">HORIZON</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="router('home')" id="nav-home" class="nav-btn active-nav font-semibold transition hover:text-blue-600">Home</button>
+                    <button onclick="router('schedule')" id="nav-schedule" class="nav-btn font-semibold transition hover:text-blue-600">Flight Schedule</button>
+                    <button onclick="router('status')" id="nav-status" class="nav-btn font-semibold transition hover:text-blue-600">Arrivals & Departures</button>
+                    <button onclick="router('history')" id="nav-history" class="nav-btn font-semibold transition hover:text-blue-600">History</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2 border-t pt-4">
+                <button onclick="router('home')" class="block w-full text-left py-2 hover:bg-gray-100 px-2 rounded">Home</button>
+                <button onclick="router('schedule')" class="block w-full text-left py-2 hover:bg-gray-100 px-2 rounded">Schedule</button>
+                <button onclick="router('status')" class="block w-full text-left py-2 hover:bg-gray-100 px-2 rounded">Status</button>
+                <button onclick="router('history')" class="block w-full text-left py-2 hover:bg-gray-100 px-2 rounded">History</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (Injected via JS) -->
+    <main id="app" class="flex-grow">
+        <!-- Content loads here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-auto">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">SkyHorizon</h3>
+                    <p class="text-gray-400 text-sm">Connecting the world, one flight at a time.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-sm text-gray-500">
+                &copy; 2024 SkyHorizon Airlines. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -20,7 +20,8 @@ Features
 7) Mobile Friendly: The website works on phones and computers.
 
 
-How to Run This Project
+How to Run This Project:
+
 
 Download the 3 files: index.html, style.css, and script.js.
 
@@ -40,6 +41,7 @@ HTML: For the structure of the page.
 CSS: For colors and design. I used Tailwind CSS (it loads from the internet).
 
 JavaScript: For making the buttons, login, and search work.
+
 
 Note for Github
 

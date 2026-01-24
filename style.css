@@ -1,49 +1,54 @@
 /* Global Font */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f3f4f6;
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #f8fafc; 
+    color: #1e293b; 
 }
 
-/* Custom Scrollbar for Webkit browsers (Chrome, Safari) */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
-::-webkit-scrollbar-thumb {
-    background: #cbd5e1; 
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8; 
-}
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
 
-/* Page Transitions */
-.fade-in {
-    animation: fadeIn 0.5s ease-in-out;
-}
+/* Page Animations */
+.fade-in { animation: fadeIn 0.4s ease-in-out; }
+.slide-in { animation: slideIn 0.3s ease-out; }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-/* Flight Card Hover Effects */
-.flight-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
-/* Navigation Active State */
-.active-nav {
-    border-bottom: 2px solid #3b82f6; /* Tailwind Blue-500 */
-    color: #1d4ed8; /* Tailwind Blue-700 */
+/* Flight Card Styling */
+.flight-card { transition: all 0.3s ease; }
+.flight-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+/* Discount Red Badge */
+.discount-badge {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px 0 20px 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
 }
 
-/* Hero Section Background */
+/* Active Navigation Link */
+.active-nav { color: #2563eb; border-bottom: 2px solid #2563eb; }
+
+/* Hero Section Background Image */
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
+
+/* Toast Notification Positioning */
+#toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 100; }

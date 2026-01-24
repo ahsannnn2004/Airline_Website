@@ -1,55 +1,46 @@
-##  SkyHorizon Airlines Website
+SkyHorizon Asia
 
-<p> A responsive, functional airline portal built with HTML, CSS (Tailwind), and JavaScript. This project simulates a real-world airline website featuring flight schedules, a live arrival/departure board, and booking functionality. </p>
-
-
-<h4> Features: </h4>
-
-1) Single Page Application (SPA) Architecture: Smooth navigation between pages without reloading.
-
-2) Arrivals & Departures Board: Dynamic table showing flight status with filtering capabilities (Arrivals vs. Departures).
-
-3) Flight Schedule: Browse upcoming flights with price information.
-
-4) Interactive Booking: Mock booking functionality with confirmation alerts.
-
-5) Company History: visual timeline of the airline's growth.
-
-6) Responsive Design: Fully mobile-friendly using Tailwind CSS.
+SkyHorizon Asia is a simple airline website. It lets users see flights between Asian countries, create an account, and book tickets.
 
 
-<h4> Technologies Used: </h4>
+Features
 
-HTML5: Semantic structure.
+1) Search Flights: You can type a city name (like "Karachi" or "Bangkok") to find flights.
 
-CSS3 & Tailwind CSS (CDN): Modern utility-first styling and animations.
+2) Discounts: Some flights show a red badge if they are on sale.
 
-JavaScript (ES6+): Logic for routing, data filtering, and DOM manipulation.
+3) Login & Signup: You can create an account with a username and password. You must confirm your password when signing up.
 
+4) Booking History: If you are logged in, you can see all the flights you have booked.
 
-<h4> Project Structure: </h4>
+5) Reviews: You can write a review and give stars to the airline.
 
-Currently, the project is based on just Html, Css and javascript but further features will be added to this in the near future.
+6) Company History: A timeline showing how SkyHorizon started.
 
-
-<h4> How to Run: </h4>
-
-Download the index.html , style.css , script.js file.
-
-Open it in any modern web browser (Chrome, Firefox, Edge, Safari).
-
-No server installation is required.
+7) Mobile Friendly: The website works on phones and computers.
 
 
-<h4> Future Improvements: </h4>
+How to Run This Project
 
-User Authentication: Add login/signup for user profiles.
+Download the 3 files: index.html, style.css, and script.js.
 
-Backend Integration: Connect to a real database (Node.js/Express or Firebase) instead of using mock data arrays.
+Put them all in the same folder on your computer.
 
-Seat Selection: Interactive seat map using HTML Canvas or CSS Grid.
+Open Visual Studio Code.
+
+Open index.html.
+
+Right-click on the code and select "Open with Live Server" (if you have that extension), or just double-click the index.html file in your folder to open it in Chrome or Edge.
 
 
-<h4> License: </h4>
+Technologies Used
 
-This project is open-source and available for educational purposes.
+HTML: For the structure of the page.
+
+CSS: For colors and design. I used Tailwind CSS (it loads from the internet).
+
+JavaScript: For making the buttons, login, and search work.
+
+Note for Github
+
+This project is for learning purposes. It does not use a real database. All data (like users and bookings) is saved in your browser's "Local Storage". If you clear your browser history, the data will disappear.
